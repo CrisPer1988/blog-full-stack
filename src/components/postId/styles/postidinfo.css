@@ -1,0 +1,31 @@
+.postidinfo {
+  display: grid;
+  margin: 0 auto;
+  width: 40%;
+  border: 0.05em solid rgba(170, 170, 170, 0.897);
+  border-radius: 15px;
+  background-color: rgb(22, 34, 96);
+
+  /* margin-left: 20%; */
+
+  padding: 20px; 
+}
+
+.postidinfo > h2 {
+  color: white;
+  font-size: 3em;
+  margin-bottom: 1em;
+
+}
+
+.he-50 {
+  /* height: 40em; */
+}
+
+.postidinfo__content {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  font-size: 1.5em;
+  color: rgb(255, 255, 255);
+
+}

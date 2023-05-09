@@ -1,0 +1,27 @@
+.footer {
+  border: 1px solid #0002;
+  background-color: rgb(22, 34, 96);
+  color: white;
+  width: 100%;
+  padding: 3em 5em 3em 5em;
+}
+
+.footer__info_page > p {
+  font-size: 1.2em;
+  color: rgb(72, 202, 124);
+}
+
+.footer__info_page {
+  margin-bottom: 2em;
+}
+
+.footer__info_developers {
+  border-top: 1px solid #0001;
+  padding-top: 1em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer_name {
+  color: rgb(72, 202, 124);
+}

@@ -1,0 +1,46 @@
+.home {
+  padding: 10px 50px;
+  min-height: 50vh;
+  background-color: rgb(35, 35, 35);
+  color: white;
+}
+
+.home__title {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.home__description {
+  color: rgba(255, 255, 255, 0.746);
+  text-align: center;
+}
+
+.home__post-container {
+  display: flex;
+  place-content: center;
+  /* margin: 0 auto; */
+  gap: 1em;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+.home__btn {
+  background-color: rgb(30, 164, 83);
+  color: white;
+  font-weight: 700;
+  font-size: 2rem;
+  position: fixed;
+  bottom: 5%;
+  right: 2%;
+  width: 1.5em;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  transition: transform 100ms ease, box-shadow 100ms ease;
+}
+.home__btn:hover {
+  filter: brightness(1.15);
+  transform: scale(1.1);
+  box-shadow: 0 0 0.5em #0003;
+  transition: transform 100ms ease, box-shadow 100ms ease, opacity 500ms ease;
+}
