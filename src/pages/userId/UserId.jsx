@@ -1,7 +1,7 @@
 import React from "react";
 import "./../postId/postId.css";
 import UserInfo from "../../components/postId/UserInfo";
-import postId from "../../devData/postId.json";
+// import postId from "../../devData/postId.json";
 import PostUserCard from "./../../components/userId/PostUserCard";
 
 export const UserId = () => {
