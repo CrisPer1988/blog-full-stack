@@ -12,7 +12,7 @@ const Home = () => {
   const dispatch = useDispatch();
 
   const [isCloseForm, setIsCloseForm] = useState(true);
-  const { socket, online } = useSocket("http://localhost:3200");
+  const { socket, online } = useSocket("https://blog-web-psus.onrender.com");
 
   useEffect(() => {
     socket.on("render-new-post", (data) => {
