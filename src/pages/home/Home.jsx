@@ -54,8 +54,8 @@ const Home = () => {
         </p>
       }
 
-      {
-        isToken ? 
+      {/* {
+        isToken ?  */}
         
 <div className="home__post-container">
         {posts?.posts.map((post) => (
@@ -63,7 +63,7 @@ const Home = () => {
         ))}
       </div>
       : ""
-      }
+      {/* } */}
       
       
       <button onClick={handleCreatePost} className="home__btn">
