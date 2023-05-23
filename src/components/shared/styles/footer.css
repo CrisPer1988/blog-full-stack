@@ -3,7 +3,7 @@
   background-color: rgb(22, 34, 96);
   color: white;
   width: 100%;
-  padding: 3em 5em 3em 5em;
+  padding: 1.5em 5em;
 }
 
 .footer__info_page > p {
@@ -12,7 +12,7 @@
 }
 
 .footer__info_page {
-  margin-bottom: 2em;
+  margin-bottom: 0.5em;
 }
 
 .footer__info_developers {

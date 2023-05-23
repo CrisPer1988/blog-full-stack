@@ -2,7 +2,7 @@ import PostCard from "../../components/home/PostCard";
 import "./home.css";
 import { useDispatch, useSelector } from "react-redux";
 import FormPost from "../../components/home/FormPost";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useLayoutEffect } from "react";
 import { useSocket } from "../../hooks/useSocket";
 import { addPost, getAllPostThunk } from "./../../store/slices/posts.slice";
 /* ----  */
@@ -25,29 +25,47 @@ const Home = () => {
     setIsCloseForm(false);
   };
   // const local = localStorage.getItem("token")
+   const [isToken, setIsToken] = useState(localStorage.getItem("token"))
+
+  
+
+  
+  console.log(isToken);
+
+  // const handleToken = setIsToken(localStorage.getItem("token"))
+  
 
   //console.log(local);
   return (
     <div className="home">
       <h1 className="home__title">Spark Link</h1>
-      {/* {
-        local ? "" : */}
+      {
+        isToken ? ""
+        : 
+
         <p className="home__description">
-      ¡Bienvenido/a a Spark Link!
+        ¡Bienvenido/a a Spark Link!
+  
+  Nos complace tenerte aquí como parte de nuestra comunidad en línea. En Spark Link, nuestro objetivo es proporcionarte contenido interesante y útil en temas como tecnología, negocios, marketing digital, creatividad y mucho más.
+  
+  Como nuevo/a miembro de la comunidad, tendrás acceso a una variedad de recursos y herramientas diseñados para ayudarte a desarrollar tus habilidades y conocimientos en estas áreas. Además, tendrás la oportunidad de conectarte con otros miembros de la comunidad que comparten tus intereses y objetivos.
+  
+  ¡Estamos emocionados de tenerte a bordo y esperamos que disfrutes explorando todo lo que Spark Link tiene para ofrecer! Si tienes alguna pregunta o sugerencia, no dudes en ponerte en contacto con nosotros. ¡Gracias por unirte a nuestra comunidad!
+        </p>
+      }
 
-Nos complace tenerte aquí como parte de nuestra comunidad en línea. En Spark Link, nuestro objetivo es proporcionarte contenido interesante y útil en temas como tecnología, negocios, marketing digital, creatividad y mucho más.
-
-Como nuevo/a miembro de la comunidad, tendrás acceso a una variedad de recursos y herramientas diseñados para ayudarte a desarrollar tus habilidades y conocimientos en estas áreas. Además, tendrás la oportunidad de conectarte con otros miembros de la comunidad que comparten tus intereses y objetivos.
-
-¡Estamos emocionados de tenerte a bordo y esperamos que disfrutes explorando todo lo que Spark Link tiene para ofrecer! Si tienes alguna pregunta o sugerencia, no dudes en ponerte en contacto con nosotros. ¡Gracias por unirte a nuestra comunidad!
-      </p>
-      {/* } */}
-      
-      <div className="home__post-container">
+      {
+        isToken ? 
+        
+<div className="home__post-container">
         {posts?.posts.map((post) => (
           <PostCard key={post.id} post={post} />
         ))}
       </div>
+      : ""
+      }
+      
+      
       <button onClick={handleCreatePost} className="home__btn">
         +
       </button>

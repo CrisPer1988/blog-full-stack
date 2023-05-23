@@ -15,9 +15,8 @@ export const { setUser } = userSlice.actions;
 export default userSlice.reducer;
 
 export const loginThunk = (data) => (dispatch) => {
-  //blogApi
-  axios
-    .post("https://blog-web-psus.onrender.com/api/v1/auth/login", data)
+  blogApi
+    .post("/auth/login", data)
     .then((res) => {
       console.log(res);
       localStorage.setItem("token", res.data.token);

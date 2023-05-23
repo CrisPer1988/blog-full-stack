@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { getAllPostThunk } from "../store/slices/posts.slice";
 import { getMyPostsThunk } from "../store/slices/myPosts.slice";
 import { useState } from "react";
+import axios from "axios";
 
 const usePostCrud = () => {
   const [postId, setPostId] = useState();
