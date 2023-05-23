@@ -28,7 +28,7 @@ const Register = () => {
     data.append('profileImgUrl', formData.profileImgUrl);
 
 
-    fetch('https://blog-web-psus.onrender.com/auth/signup', {
+    fetch('https://blog-web-psus.onrender.com/api/v1/auth/signup', {
       method: 'POST',
       body: data
     })

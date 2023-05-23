@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import blogApi from "../../api/blog";
+import axios from "axios";
 
 const userSlice = createSlice({
   name: "user",
@@ -14,8 +15,9 @@ export const { setUser } = userSlice.actions;
 export default userSlice.reducer;
 
 export const loginThunk = (data) => (dispatch) => {
-  blogApi
-    .post("/auth/login", data)
+  //blogApi
+  axios
+    .post("https://blog-web-psus.onrender.com/api/v1/auth/login", data)
     .then((res) => {
       console.log(res);
       localStorage.setItem("token", res.data.token);
